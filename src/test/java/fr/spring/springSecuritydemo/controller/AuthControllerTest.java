@@ -32,7 +32,7 @@ public class AuthControllerTest {
    private MockMvc api;
 
    /**
-    * Mock data so even if the project is linked to a database, tests should works
+    * Mock user data so even if the project is linked to a database, tests should works
     */
    @BeforeEach
    public void initMock() {

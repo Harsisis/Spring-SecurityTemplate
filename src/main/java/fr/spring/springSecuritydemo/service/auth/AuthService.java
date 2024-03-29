@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import fr.spring.springSecuritydemo.config.security.JwtIssuer;
 import fr.spring.springSecuritydemo.config.security.UserPrincipal;
-import fr.spring.springSecuritydemo.data.struct.LoginRepsonse;
+import fr.spring.springSecuritydemo.data.struct.LoginResponse;
 import fr.spring.springSecuritydemo.data.struct.UserCredentials;
 import lombok.RequiredArgsConstructor;
 
@@ -22,7 +22,7 @@ public class AuthService {
    private final JwtIssuer jwtIssuer;
    private final AuthenticationManager authenticationManager;
 
-   public LoginRepsonse attemptLogin(UserCredentials userCredentials) {
+   public LoginResponse attemptLogin(UserCredentials userCredentials) {
       var authentication = authenticationManager
             .authenticate(new UsernamePasswordAuthenticationToken(userCredentials.email(), userCredentials.password()));
          SecurityContextHolder.getContext().setAuthentication(authentication);

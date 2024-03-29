@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import org.springframework.security.test.context.support.WithSecurityContext;
 
 /**
- * Mock custom context with fake user for test purposes, with default values :
+ * Mock custom context with fake user for test purposes, default values :
  * <li>User id : 1</li>
  * <li>User role : 'ROLE_USER'</li>
  */
