@@ -30,6 +30,6 @@ public class AuthService {
          
          var roles = principal.getAuthorities().stream().map(GrantedAuthority::getAuthority).toList();
          
-         return new LoginRepsonse(jwtIssuer.issue(principal.getUserId(), principal.getEmail(), principal.isEnable(), roles));
+         return new LoginResponse(jwtIssuer.issue(principal.getUserId(), principal.getEmail(), principal.isEnable(), roles));
    }
 }

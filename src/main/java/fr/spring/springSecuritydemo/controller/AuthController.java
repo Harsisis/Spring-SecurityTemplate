@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.spring.springSecuritydemo.data.struct.LoginRepsonse;
+import fr.spring.springSecuritydemo.data.struct.LoginResponse;
 import fr.spring.springSecuritydemo.data.struct.UserCredentials;
 import fr.spring.springSecuritydemo.service.auth.AuthService;
 import lombok.RequiredArgsConstructor;
@@ -24,7 +24,7 @@ public class AuthController {
    private final AuthService authService;
 
    @PostMapping("/login")
-   public ResponseEntity<LoginRepsonse> login(@RequestBody @Validated UserCredentials userCredentials) {
+   public ResponseEntity<LoginResponse> login(@RequestBody @Validated UserCredentials userCredentials) {
       return new ResponseEntity<>(authService.attemptLogin(userCredentials), HttpStatus.OK);
    }
 }
